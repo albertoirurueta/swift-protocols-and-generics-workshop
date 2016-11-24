@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		286E79251DE6E6420045F165 /* swiftProtocolsAndGenerics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286E791B1DE6E6420045F165 /* swiftProtocolsAndGenerics.framework */; };
-		286E792A1DE6E6420045F165 /* swiftProtocolsAndGenericsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286E79291DE6E6420045F165 /* swiftProtocolsAndGenericsTests.swift */; };
 		286E792C1DE6E6420045F165 /* swiftProtocolsAndGenerics.h in Headers */ = {isa = PBXBuildFile; fileRef = 286E791E1DE6E6420045F165 /* swiftProtocolsAndGenerics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		286E79361DE6EAA40045F165 /* EditDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286E79351DE6EAA40045F165 /* EditDistance.swift */; };
+		286E79381DE705220045F165 /* EditDistanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286E79371DE705220045F165 /* EditDistanceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +28,9 @@
 		286E791E1DE6E6420045F165 /* swiftProtocolsAndGenerics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swiftProtocolsAndGenerics.h; sourceTree = "<group>"; };
 		286E791F1DE6E6420045F165 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		286E79241DE6E6420045F165 /* swiftProtocolsAndGenericsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swiftProtocolsAndGenericsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		286E79291DE6E6420045F165 /* swiftProtocolsAndGenericsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftProtocolsAndGenericsTests.swift; sourceTree = "<group>"; };
 		286E792B1DE6E6420045F165 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		286E79351DE6EAA40045F165 /* EditDistance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDistance.swift; sourceTree = "<group>"; };
+		286E79371DE705220045F165 /* EditDistanceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDistanceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				286E791E1DE6E6420045F165 /* swiftProtocolsAndGenerics.h */,
 				286E791F1DE6E6420045F165 /* Info.plist */,
+				286E79351DE6EAA40045F165 /* EditDistance.swift */,
 			);
 			path = swiftProtocolsAndGenerics;
 			sourceTree = "<group>";
@@ -80,8 +83,8 @@
 		286E79281DE6E6420045F165 /* swiftProtocolsAndGenericsTests */ = {
 			isa = PBXGroup;
 			children = (
-				286E79291DE6E6420045F165 /* swiftProtocolsAndGenericsTests.swift */,
 				286E792B1DE6E6420045F165 /* Info.plist */,
+				286E79371DE705220045F165 /* EditDistanceTests.swift */,
 			);
 			path = swiftProtocolsAndGenericsTests;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 					286E791A1DE6E6420045F165 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = U57BHELK4C;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					286E79231DE6E6420045F165 = {
@@ -198,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				286E79361DE6EAA40045F165 /* EditDistance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				286E792A1DE6E6420045F165 /* swiftProtocolsAndGenericsTests.swift in Sources */,
+				286E79381DE705220045F165 /* EditDistanceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +327,7 @@
 		286E79301DE6E6420045F165 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = U57BHELK4C;
@@ -334,6 +340,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.visualengin.swiftProtocolsAndGenerics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -341,6 +348,7 @@
 		286E79311DE6E6420045F165 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = U57BHELK4C;
@@ -360,6 +368,7 @@
 		286E79331DE6E6420045F165 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = U57BHELK4C;
 				INFOPLIST_FILE = swiftProtocolsAndGenericsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -372,6 +381,7 @@
 		286E79341DE6E6420045F165 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = U57BHELK4C;
 				INFOPLIST_FILE = swiftProtocolsAndGenericsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -400,6 +410,7 @@
 				286E79311DE6E6420045F165 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		286E79321DE6E6420045F165 /* Build configuration list for PBXNativeTarget "swiftProtocolsAndGenericsTests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +419,7 @@
 				286E79341DE6E6420045F165 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
