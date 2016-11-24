@@ -1,0 +1,5 @@
+language: objective-c
+osx_image: xcode8.1
+xcode_project: ./swiftProtocolsAndGenerics/swiftProtocolsAndGenerics.xcodeproj
+xcode_scheme: swiftProtocolsAndGenerics
+xcode_sdk: iphonesimulator10.1
