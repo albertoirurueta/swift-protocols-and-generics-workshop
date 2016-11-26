@@ -6,12 +6,10 @@ TARGET_BRANCH="gh-pages"
 
 #This function needs to do some stuff and store all the artifacts in the out directory
 function doStuff {
-  #stuff to do
-  	mkdir out
   	#generate documentation
   	jazzy --clean --author Alberto Irurueta --github_url https://github.com/albertoirurueta/swift-protocols-and-generics-workshop --xcodebuild-arguments -project,./swiftProtocolsAndGenerics/swiftProtocolsAndGenerics.xcodeproj,-scheme,swiftProtocolsAndGenerics --module swiftProtocolsAndGenerics --output out/docs
   	#move result of xcpretty to out directory
-  	#mv build out
+  	mv build out
 }
 
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
