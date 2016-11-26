@@ -1,5 +1,10 @@
 language: objective-c
 osx_image: xcode8.1
+env:
+  global:
+    - ENCRYPTION_LABEL: "0d0cc787d66b"
+    - COMMIT_AUTHOR_EMAIL: "alberto@irurueta.com"
+
 #cache: cocoapods
 before_install:
   #- gem install cocoapods --no-ri --no-rdoc
@@ -7,3 +12,4 @@ before_install:
 script:
   - xcodebuild clean test -project ./swiftProtocolsAndGenerics/swiftProtocolsAndGenerics.xcodeproj -scheme swiftProtocolsAndGenerics -destination 'platform=iOS Simulator,name=iPhone 7' TEST_AFTER_BUILD=YES -configuration Debug -enableCodeCoverage=YES
   - slather
+  - ./publish-gh-pages.sh
