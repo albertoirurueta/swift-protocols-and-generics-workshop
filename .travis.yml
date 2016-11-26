@@ -10,6 +10,6 @@ before_install:
   #- gem install cocoapods --no-ri --no-rdoc
   - gem install slather --no-ri --no-rdoc
 script:
-  - xcodebuild clean test -project ./swiftProtocolsAndGenerics/swiftProtocolsAndGenerics.xcodeproj -scheme swiftProtocolsAndGenerics -destination 'platform=iOS Simulator,name=iPhone 7' TEST_AFTER_BUILD=YES -configuration Debug -enableCodeCoverage=YES
+  - set -o pipefail && xcodebuild clean test -project ./swiftProtocolsAndGenerics/swiftProtocolsAndGenerics.xcodeproj -scheme swiftProtocolsAndGenerics -destination 'platform=iOS Simulator,name=iPhone 7' TEST_AFTER_BUILD=YES -configuration Debug -enableCodeCoverage=YES | tee xcodebuild.log | xcpretty -r html
   - slather
   - ./publish-gh-pages.sh
