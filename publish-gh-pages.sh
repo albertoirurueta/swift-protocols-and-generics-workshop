@@ -66,9 +66,6 @@ git add .
 git commit -m "Deploy to GitHub Pages: ${SHA}"
 
 # Now that we're all set up, we can push.
-echo "Setting correct permissions to ssh files"
-chmod 700 ~/.ssh
-chmod 644 ~/.ssh/authorized_keys
-
 echo "Pushing to $SSH_REPO on branch $TARGET_BRANCH"
-git push $SSH_REPO $TARGET_BRANCH
+#git push $SSH_REPO $TARGET_BRANCH
+git push https://albertoirurueta:$GITHUB_OAUTH_TOKEN@github.com/albertoirurueta/swift-protocols-and-generics-workshop.git $TARGET_BRANCH
