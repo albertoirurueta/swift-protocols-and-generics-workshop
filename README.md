@@ -8,7 +8,7 @@ Workshop for Swift protocols &amp; generics
 [Code Documentation](https://albertoirurueta.github.io/swift-protocols-and-generics-workshop/docs/index.html)
 
 
-[Test report](https://albertoirurueta.github.io/swift-protocols-and-generics-workshop/build/reports/index.html)
+[Test report](https://albertoirurueta.github.io/swift-protocols-and-generics-workshop/build/reports/tests.html)
 
 
 [Github pages](https://albertoirurueta.github.io/swift-protocols-and-generics-workshop/)
