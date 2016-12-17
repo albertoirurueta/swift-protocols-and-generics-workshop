@@ -22,8 +22,8 @@ public class EditDistance {
     
     /**
      Calcula la distance de Levenshtein entre dos Strings.
-     - param x: el primer String.
-     - param y: el segundo String.
+     - parameter x: el primer String.
+     - parameter y: el segundo String.
      - returns: la distancia de Levenshtein.
      */
     public static func distance(x: String, y: String) -> Int {
@@ -35,8 +35,8 @@ public class EditDistance {
      EditDistanceMeasurable.
      Se puede utilizar este método con cualquier tipo de datos que implemente
      el protocolo EditDistanceMeasurable.
-     - param x: el primer EditDistanceMeasurable.
-     - param y: el segundo EditDistanceMeasurable.
+     - parameter x: el primer EditDistanceMeasurable.
+     - parameter y: el segundo EditDistanceMeasurable.
      - returns: la distancia de Levenshtein.
      */
     internal static func internalDistance(x: EditDistanceMeasurable,
@@ -110,9 +110,9 @@ internal protocol EditDistanceMeasurable {
     /**
      Compara este EditDistanceMeasurable con otro proporcionado en las 
      posiciones indicadas.
-     - param other: otro string a comparar con este.
-     - param posX: posición en este EditDistanceMeasurable que debe compararse.
-     - param posY: posición en el otro EditDistanceMeasurable que debe 
+     - parameter other: otro string a comparar con este.
+     - parameter posX: posición en este EditDistanceMeasurable que debe compararse.
+     - parameter posY: posición en el otro EditDistanceMeasurable que debe
      compararse.
      - returns: true si ambos EditDistanceMeasurable son iguales en las 
      posiciones indicadas.
@@ -136,9 +136,9 @@ extension String : EditDistanceMeasurable {
     /**
      Compara este MeasurableString con otro proporcionado en las posiciones
      indicadas.
-     - param other: otro string a comparar con este.
-     - param posX: posición en este MeasurableString que debe compararse.
-     - param posY: posición en el otro MeasurableString que debe compararse.
+     - parameter other: otro string a comparar con este.
+     - parameter posX: posición en este MeasurableString que debe compararse.
+     - parameter posY: posición en el otro MeasurableString que debe compararse.
      - returns: true si ambos MeasurableStrings son iguales en las posiciones
      indicadas.
      */
