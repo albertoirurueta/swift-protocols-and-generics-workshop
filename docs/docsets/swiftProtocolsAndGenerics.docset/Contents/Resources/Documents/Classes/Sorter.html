@@ -1,0 +1,2389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sorter Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Sorter" class="dashAnchor"></a>
+    <a title="Sorter Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">swiftProtocolsAndGenerics Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/albertoirurueta/swift-protocols-and-generics-workshop"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">swiftProtocolsAndGenerics Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Sorter Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Container.html">Container</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EditDistance.html">EditDistance</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FoundationSorter.html">FoundationSorter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HeapsortSorter.html">HeapsortSorter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QuicksortSorter.html">QuicksortSorter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ShellSorter.html">ShellSorter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Sorter.html">Sorter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Sorter/SorterError.html">– SorterError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/StraightInsertionSorter.html">StraightInsertionSorter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/SortingMethod.html">SortingMethod</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Comparator.html">Comparator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ComparatorAndAverager.html">ComparatorAndAverager</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Sorter</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Sorter</span></code></pre>
+
+                </div>
+              </div>
+            <p>Clase base para ordenar arrays de tipo T en orden ascendente (de menor a 
+mayor).
+Si se desea obtener el orden inverso, se pueden utilizar closures o Comparators
+para invertir el orden.
+Esta clase no puede instanciarse directamente, debe usarse una de las subclases
+disponibles.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC25swiftProtocolsAndGenerics6Sorter20DefaultSortingMethodOS_13SortingMethod"></a>
+                    <a name="//apple_ref/swift/Variable/DefaultSortingMethod" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC25swiftProtocolsAndGenerics6Sorter20DefaultSortingMethodOS_13SortingMethod">DefaultSortingMethod</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Método de ordenación utilizado por defecto.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">DefaultSortingMethod</span> <span class="o">=</span> <span class="kt"><a href="../Enums/SortingMethod.html">SortingMethod</a></span><span class="o">.</span><span class="n">quicksort</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC25swiftProtocolsAndGenerics6Sorter6methodOS_13SortingMethod"></a>
+                    <a name="//apple_ref/swift/Property/method" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC25swiftProtocolsAndGenerics6Sorter6methodOS_13SortingMethod">method</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Devuelve el método utilizado para ordenar.
+Esta propiedad debe sobreescribirse en las correspondientes subclases.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="../Enums/SortingMethod.html">SortingMethod</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC25swiftProtocolsAndGenerics6Sorter4sorturFzTRGSax_9fromIndexSi7toIndexSi10comparatorFTxx_Si_T_"></a>
+                    <a name="//apple_ref/swift/Method/sort(_:fromIndex:toIndex:comparator:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC25swiftProtocolsAndGenerics6Sorter4sorturFzTRGSax_9fromIndexSi7toIndexSi10comparatorFTxx_Si_T_">sort(_:fromIndex:toIndex:comparator:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ordena el array proporcionado de forma ascendente de modo que:
+array[i - 1] &lt; array[i] para cualquier i válido.
+Este método modifica el array proporcionado de modo que tras la ejecución
+los elementos del array quedan ordenados.
+- parameter array: array a ordenar. Tras la ejecución de este método los 
+elementos entre la sposiciones fomIndex (incluído) y toIndex (excluído)
+se modifican de modo que quedan en orden ascendente.
+- parameter fromIndex: posición donde se inicia la ordenación (incluído).
+- parameter toIndex: posición donde finaliza la ordenación (excluído).
+- parameter comparator: determina si un elemento es mayor o menor que otro.
+Devuelve -1 si o1 es menor que o2, 0 si o1 es igual a o2 y 1 si o1 es mayor
+que o2.
+- parameter o1: primer elemento a comparar
+- parameter o2: segundo elemento a comparar
+- throws:
+   - SorterError.illegalIndices si fromIndex es mayor que toIndex.
+   - SorterError.indexOutOfBounds si los índices están fuera del rango
+   de índices válido para el array proporcionado.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">sort</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">array</span><span class="p">:</span> <span class="k">inout</span> <span class="p">[</span><span class="kt">T</span><span class="p">],</span> <span class="nv">fromIndex</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">toIndex</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+              <span class="nv">comparator</span><span class="p">:</span> <span class="p">(</span><span class="n">_</span> <span class="nv">o1</span><span class="p">:</span> <span class="kt">T</span><span class="p">,</span> <span class="n">_</span> <span class="nv">o2</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>array</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>array a ordenar. Tras la ejecución de este método los elementos entre la sposiciones fomIndex (incluído) y toIndex (excluído) se modifican de modo que quedan en orden ascendente.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fromIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>posición donde se inicia la ordenación (incluído).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>toIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>posición donde finaliza la ordenación (excluído).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>comparator</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>determina si un elemento es mayor o menor que otro. Devuelve -1 si o1 es menor que o2, 0 si o1 es igual a o2 y 1 si o1 es mayor que o2.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>o1</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>primer elemento a comparar</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>o2</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>segundo elemento a comparar</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC25swiftProtocolsAndGenerics6Sorter4sorturFzTRGSax_9fromIndexSi7toIndexSi10comparatorPS_10Comparator__T_"></a>
+                    <a name="//apple_ref/swift/Method/sort(_:fromIndex:toIndex:comparator:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC25swiftProtocolsAndGenerics6Sorter4sorturFzTRGSax_9fromIndexSi7toIndexSi10comparatorPS_10Comparator__T_">sort(_:fromIndex:toIndex:comparator:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ordena el array proporcionado de forma ascendente de modo que:
+array[i - 1] &lt; array[i] para cualquier i válido.
+Este método modifica el array proporcionado de modo que tras la ejecución
+los elementos del array quedan ordenados.
+- parameter array: array a ordenar. Tras la ejecución de este método los
+elementos entre la sposiciones fomIndex (incluído) y toIndex (excluído)
+se modifican de modo que quedan en orden ascendente.
+- parameter fromIndex: posición donde se inicia la ordenación (incluído).
+- parameter toIndex: posición donde finaliza la ordenación (excluído).
+- parameter comparator: determina si un elemento es mayor o menor que otro.
+- throws:
+   - SorterError.illegalIndices si fromIndex es mayor que toIndex.
+   - SorterError.indexOutOfBounds si los índices están fuera del rango
+   de índices válido para el array proporcionado.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">sort</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">array</span><span class="p">:</span> <span class="k">inout</span> <span class="p">[</span><span class="kt">T</span><span class="p">],</span> <span class="n">fromIndex</span> <span class="nv">from</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+                     <span class="n">toIndex</span> <span class="nv">to</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">comparator</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Comparator.html">Comparator</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>array</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>array a ordenar. Tras la ejecución de este método los elementos entre la sposiciones fomIndex (incluído) y toIndex (excluído) se modifican de modo que quedan en orden ascendente.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fromIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>posición donde se inicia la ordenación (incluído).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>toIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>posición donde finaliza la ordenación (excluído).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>comparator</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>determina si un elemento es mayor o menor que otro.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC25swiftProtocolsAndGenerics6Sorter4sortuRxs10ComparablerFzTRGSax_9fromIndexSi7toIndexSi_T_"></a>
+                    <a name="//apple_ref/swift/Method/sort(_:fromIndex:toIndex:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC25swiftProtocolsAndGenerics6Sorter4sortuRxs10ComparablerFzTRGSax_9fromIndexSi7toIndexSi_T_">sort(_:fromIndex:toIndex:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ordena el array de Comparables proporcionado de forma ascendente de modo 
+que: array[i - 1] &lt; array[i] para cualquier i válido.
+Este método modifica el array proporcionado de modo que tras la ejecución
+los elementos del array quedan ordenados.
+- parameter array: array a ordenar. Tras la ejecución de este método los
+elementos entre la sposiciones fomIndex (incluído) y toIndex (excluído)
+se modifican de modo que quedan en orden ascendente.
+- parameter fromIndex: posición donde se inicia la ordenación (incluído).
+- parameter toIndex: posición donde finaliza la ordenación (excluído).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">sort</span><span class="o">&lt;</span><span class="kt">T</span> <span class="p">:</span> <span class="kt">Comparable</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">array</span><span class="p">:</span> <span class="k">inout</span> <span class="p">[</span><span class="kt">T</span><span class="p">],</span> <span class="n">fromIndex</span> <span class="nv">from</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+                     <span class="n">toIndex</span> <span class="nv">to</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>array</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>array a ordenar. Tras la ejecución de este método los elementos entre la sposiciones fomIndex (incluído) y toIndex (excluído) se modifican de modo que quedan en orden ascendente.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fromIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>posición donde se inicia la ordenación (incluído).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>toIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>posición donde finaliza la ordenación (excluído).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC25swiftProtocolsAndGenerics6Sorter4sorturFTRGSax_10comparatorFTxx_Si_T_"></a>
+                    <a name="//apple_ref/swift/Method/sort(_:comparator:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC25swiftProtocolsAndGenerics6Sorter4sorturFTRGSax_10comparatorFTxx_Si_T_">sort(_:comparator:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ordena el array proporcionado de forma ascendente de modo que:
+array[i - 1] &lt; array[i] para cualquier i válido.
+Este método modifica el array proporcionado de modo que tras la ejecución
+los elementos del array quedan ordenados.
+- parameter array: array a ordenar.
+- parameter comparator: determina si un elemento es mayor o menor que otro.
+Devuelve -1 si o1 es menor que o2, 0 si o1 es igual a o2 y 1 si o1 es mayor
+que o2.
+- parameter o1: primer elemento a comparar
+- parameter o2: segundo elemento a comparar</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">sort</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">array</span><span class="p">:</span> <span class="k">inout</span> <span class="p">[</span><span class="kt">T</span><span class="p">],</span>
+                     <span class="n">comparator</span> <span class="nv">c</span><span class="p">:</span> <span class="p">(</span><span class="n">_</span> <span class="nv">o1</span><span class="p">:</span> <span class="kt">T</span><span class="p">,</span> <span class="n">_</span> <span class="nv">o2</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>array</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>array a ordenar.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>comparator</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>determina si un elemento es mayor o menor que otro. Devuelve -1 si o1 es menor que o2, 0 si o1 es igual a o2 y 1 si o1 es mayor que o2.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>o1</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>primer elemento a comparar</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>o2</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>segundo elemento a comparar</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC25swiftProtocolsAndGenerics6Sorter4sorturFTRGSax_10comparatorPS_10Comparator__T_"></a>
+                    <a name="//apple_ref/swift/Method/sort(_:comparator:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC25swiftProtocolsAndGenerics6Sorter4sorturFTRGSax_10comparatorPS_10Comparator__T_">sort(_:comparator:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ordena el array proporcionado de forma ascendente de modo que:
+array[i - 1] &lt; array[i] para cualquier i válido.
+Este método modifica el array proporcionado de modo que tras la ejecución
+los elementos del array quedan ordenados.
+- parameter array: array a ordenar.
+- parameter comparator: determina si un elemento es mayor o menor que otro.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">sort</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">array</span><span class="p">:</span> <span class="k">inout</span> <span class="p">[</span><span class="kt">T</span><span class="p">],</span> <span class="n">comparator</span> <span class="nv">c</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Comparator.html">Comparator</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>array</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>array a ordenar.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>comparator</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>determina si un elemento es mayor o menor que otro.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC25swiftProtocolsAndGenerics6Sorter4sortuRxs10ComparablerFRGSax_T_"></a>
+                    <a name="//apple_ref/swift/Method/sort(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC25swiftProtocolsAndGenerics6Sorter4sortuRxs10ComparablerFRGSax_T_">sort(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ordena el array de Comparables proporcionado de forma ascendente de modo 
+que: array[i - 1] &lt; array[i] para cualquier i válido.
+Este método modifica el array proporcionado de modo que tras la ejecución
+los elementos del array quedan ordenados.
+- parameter array: array a ordenar.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">sort</span><span class="o">&lt;</span><span class="kt">T</span> <span class="p">:</span> <span class="kt">Comparable</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">array</span><span class="p">:</span> <span class="k">inout</span> <span class="p">[</span><span class="kt">T</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>array</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>array a ordenar.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC25swiftProtocolsAndGenerics6Sorter6sortedurFzTGSax_9fromIndexSi7toIndexSi10comparatorFTxx_Si_GSax_"></a>
+                    <a name="//apple_ref/swift/Method/sorted(_:fromIndex:toIndex:comparator:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC25swiftProtocolsAndGenerics6Sorter6sortedurFzTGSax_9fromIndexSi7toIndexSi10comparatorFTxx_Si_GSax_">sorted(_:fromIndex:toIndex:comparator:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ordena el array proporcionado de forma ascendente y devuelve un nuevo array
+con el resultado.
+- parameter array: array a ordenar.
+- parameter fromIndex: posición donde se inicia la ordenación (incluído).
+- parameter toIndex: posición donde finaliza la ordenación (excluído).
+- parameter comparator: determina si un elemento es mayor o menor que otro.
+Devuelve -1 si o1 es menor que o2, 0 si o1 es igual a o2 y 1 si o1 es mayor
+que o2.
+- parameter o1: primer elemento a comparar
+- parameter o2: segundo elemento a comparar
+- returns: nuevo array con las posiciones entre fromIndex (incluído) y
+toIndex (excluído) ordenadas en orden ascendente.
+- throws:
+   - SorterError.illegalIndices si fromIndex es mayor que toIndex.
+   - SorterError.indexOutOfBounds si los índices están fuera del rango
+   de índices válido para el array proporcionado.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">sorted</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">array</span><span class="p">:</span> <span class="p">[</span><span class="kt">T</span><span class="p">],</span>
+                                 <span class="n">fromIndex</span> <span class="nv">from</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+                                 <span class="n">toIndex</span> <span class="nv">to</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+                                 <span class="n">comparator</span> <span class="nv">c</span><span class="p">:</span> <span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">T</span><span class="p">,</span> <span class="nv">_</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">)</span>
+        <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">T</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>array</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>array a ordenar.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fromIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>posición donde se inicia la ordenación (incluído).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>toIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>posición donde finaliza la ordenación (excluído).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>comparator</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>determina si un elemento es mayor o menor que otro. Devuelve -1 si o1 es menor que o2, 0 si o1 es igual a o2 y 1 si o1 es mayor que o2.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>o1</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>primer elemento a comparar</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>o2</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>segundo elemento a comparar</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>nuevo array con las posiciones entre fromIndex (incluído) y toIndex (excluído) ordenadas en orden ascendente.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC25swiftProtocolsAndGenerics6Sorter6sortedurFzTGSax_9fromIndexSi7toIndexSi10comparatorPS_10Comparator__GSax_"></a>
+                    <a name="//apple_ref/swift/Method/sorted(_:fromIndex:toIndex:comparator:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC25swiftProtocolsAndGenerics6Sorter6sortedurFzTGSax_9fromIndexSi7toIndexSi10comparatorPS_10Comparator__GSax_">sorted(_:fromIndex:toIndex:comparator:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ordena el array proporcionado de forma ascendente y devuelve un nuevo array
+con el resultado.
+- parameter array: array a ordenar.
+- parameter fromIndex: posición donde se inicia la ordenación (incluído).
+- parameter toIndex: posición donde finaliza la ordenación (excluído).
+- parameter comparator: determina si un elemento es mayor o menor que otro.
+- returns: nuevo array con las posiciones entre fromIndex (incluído) y
+toIndex (excluído) ordenadas en orden ascendente.
+- throws:
+   - SorterError.illegalIndices si fromIndex es mayor que toIndex.
+   - SorterError.indexOutOfBounds si los índices están fuera del rango
+   de índices válido para el array proporcionado.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">sorted</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">array</span><span class="p">:</span> <span class="p">[</span><span class="kt">T</span><span class="p">],</span> <span class="n">fromIndex</span> <span class="nv">from</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">toIndex</span> <span class="nv">to</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+                       <span class="nv">comparator</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Comparator.html">Comparator</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">T</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>array</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>array a ordenar.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fromIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>posición donde se inicia la ordenación (incluído).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>toIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>posición donde finaliza la ordenación (excluído).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>comparator</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>determina si un elemento es mayor o menor que otro.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>nuevo array con las posiciones entre fromIndex (incluído) y toIndex (excluído) ordenadas en orden ascendente.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC25swiftProtocolsAndGenerics6Sorter6sorteduRxs10ComparablerFzTGSax_9fromIndexSi7toIndexSi_GSax_"></a>
+                    <a name="//apple_ref/swift/Method/sorted(_:fromIndex:toIndex:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC25swiftProtocolsAndGenerics6Sorter6sorteduRxs10ComparablerFzTGSax_9fromIndexSi7toIndexSi_GSax_">sorted(_:fromIndex:toIndex:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ordena el array de Comparables proporcionado de forma ascendente y devuelve 
+un nuevo array con el resultado.
+- parameter array: array a ordenar.
+- parameter fromIndex: posición donde se inicia la ordenación (incluído).
+- parameter toIndex: posición donde finaliza la ordenación (excluído).
+- returns: nuevo array con las posiciones entre fromIndex (incluído) y
+toIndex (excluído) ordenadas en orden ascendente.
+- throws:
+   - SorterError.illegalIndices si fromIndex es mayor que toIndex.
+   - SorterError.indexOutOfBounds si los índices están fuera del rango
+   de índices válido para el array proporcionado.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">sorted</span><span class="o">&lt;</span><span class="kt">T</span> <span class="p">:</span> <span class="kt">Comparable</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">array</span><span class="p">:</span> <span class="p">[</span><span class="kt">T</span><span class="p">],</span> <span class="n">fromIndex</span> <span class="nv">from</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+                       <span class="n">toIndex</span> <span class="nv">to</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">T</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>array</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>array a ordenar.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fromIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>posición donde se inicia la ordenación (incluído).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>toIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>posición donde finaliza la ordenación (excluído).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>nuevo array con las posiciones entre fromIndex (incluído) y toIndex (excluído) ordenadas en orden ascendente.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC25swiftProtocolsAndGenerics6Sorter6sortedurFTGSax_10comparatorFTxx_Si_GSax_"></a>
+                    <a name="//apple_ref/swift/Method/sorted(_:comparator:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC25swiftProtocolsAndGenerics6Sorter6sortedurFTGSax_10comparatorFTxx_Si_GSax_">sorted(_:comparator:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ordena el array proporcionado de forma ascendente y devuelve un nuevo array
+con el resultado.
+- parameter array: array a ordenar.
+- parameter comparator: determina si un elemento es mayor o menor que otro.
+Devuelve -1 si o1 es menor que o2, 0 si o1 es igual a o2 y 1 si o1 es mayor
+que o2.
+- parameter o1: primer elemento a comparar
+- parameter o2: segundo elemento a comparar
+- returns: nuevo array ordenado.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">sorted</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">array</span><span class="p">:</span> <span class="p">[</span><span class="kt">T</span><span class="p">],</span>
+                       <span class="n">comparator</span> <span class="nv">c</span><span class="p">:</span> <span class="p">(</span><span class="n">_</span> <span class="nv">o1</span><span class="p">:</span> <span class="kt">T</span><span class="p">,</span> <span class="n">_</span> <span class="nv">o2</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">T</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>array</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>array a ordenar.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>comparator</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>determina si un elemento es mayor o menor que otro. Devuelve -1 si o1 es menor que o2, 0 si o1 es igual a o2 y 1 si o1 es mayor que o2.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>o1</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>primer elemento a comparar</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>o2</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>segundo elemento a comparar</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>nuevo array ordenado.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC25swiftProtocolsAndGenerics6Sorter6sortedurFTGSax_10comparatorPS_10Comparator__GSax_"></a>
+                    <a name="//apple_ref/swift/Method/sorted(_:comparator:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC25swiftProtocolsAndGenerics6Sorter6sortedurFTGSax_10comparatorPS_10Comparator__GSax_">sorted(_:comparator:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ordena el array proporcionado de forma ascendente y devuelve un nuevo array
+con el resultado.
+- parameter array: array a ordenar.
+- parameter comparator: determina si un elemento es mayor o menor que otro.
+- returns: nuevo array ordenado.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">sorted</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">array</span><span class="p">:</span> <span class="p">[</span><span class="kt">T</span><span class="p">],</span> <span class="n">comparator</span> <span class="nv">c</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Comparator.html">Comparator</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">T</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>array</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>array a ordenar.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>comparator</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>determina si un elemento es mayor o menor que otro.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>nuevo array ordenado.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC25swiftProtocolsAndGenerics6Sorter6sorteduRxs10ComparablerFGSax_GSax_"></a>
+                    <a name="//apple_ref/swift/Method/sorted(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC25swiftProtocolsAndGenerics6Sorter6sorteduRxs10ComparablerFGSax_GSax_">sorted(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ordena el array de Comparables proporcionado de forma ascendente y devuelve 
+un nuevo array con el resultado.
+- parameter array: array a ordenar.
+- returns: nuevo array ordenado.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">sorted</span><span class="o">&lt;</span><span class="kt">T</span> <span class="p">:</span> <span class="kt">Comparable</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">array</span><span class="p">:</span> <span class="p">[</span><span class="kt">T</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">T</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>array</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>array a ordenar.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>nuevo array ordenado.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC25swiftProtocolsAndGenerics6Sorter6selecturFzTSi4fromRGSax_9fromIndexSi7toIndexSi10comparatorFTxx_Si_x"></a>
+                    <a name="//apple_ref/swift/Method/select(_:from:fromIndex:toIndex:comparator:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC25swiftProtocolsAndGenerics6Sorter6selecturFzTSi4fromRGSax_9fromIndexSi7toIndexSi10comparatorFTxx_Si_x">select(_:from:fromIndex:toIndex:comparator:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Devuelve el elemento ordenado en la posición pos del array proporcionado,
+iniciando la ordenación en fromIndex hasta toIndex. Los elementos del array 
+fuera de este rango se ignoran.
+La selección de un elemento normalmente es más rápido que ordenar todo el 
+array por completo (sobretodo en arrays grandes), y por ese motivo debería
+usarse en lugar de sort si no es necesario ordenar todo el array por 
+completo.
+Puesto que el array se pasa por referencia como un parámetro inout, tras
+la ejecución de este método el array proporcionado se modifica de tal modo 
+que en la posición k-esima se almacena el elemento ordenado k-esimo, entre
+las posiciónes array[fromIndex] &hellip; array[k -1 + fromIndex] se almacenan
+los elementos sin ordenar menores que cualquiera de los elementos ordenados
+y en las posiciones array[k + 1 + fromIndex] &hellip; array[toIndex - 1] se
+almacenan los elementos sin ordenar mayores que cualquiera de los elementos
+ordenados.
+- parameter pos: posición del elemento ordenado a obtener.
+- parameter array: array a utilizar para obtener el elemento ordenado. El
+array proporcionado se pasa por referencia y se modifica tras la ejecución 
+de este método.
+- parameter fromIndex: posición donde se inicia la ordenación (inclusivo).
+- parameter toIndex: posición donde finaliza la ordenación (exclusivo).
+- parameter comparator: determina si un elemento es mayor o menor que otro.
+Devuelve -1 si o1 es menor que o2, 0 si o1 es igual a o2 y 1 si o1 es mayor
+que o2.
+- parameter o1: primer elemento a comparar
+- parameter o2: segundo elemento a comparar
+- throws: 
+   - SorterError.illegalIndices si fromIndex es mayor que toIndex.
+   - SorterError.indexOutOfBounds si los índices están fuera del rango
+   de índices válido para el array proporcionado.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">select</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">pos</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">from</span> <span class="nv">array</span><span class="p">:</span> <span class="k">inout</span> <span class="p">[</span><span class="kt">T</span><span class="p">],</span>
+                       <span class="nv">fromIndex</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">toIndex</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+                       <span class="nv">comparator</span><span class="p">:</span> <span class="p">(</span><span class="n">_</span> <span class="nv">o1</span><span class="p">:</span> <span class="kt">T</span><span class="p">,</span> <span class="n">_</span> <span class="nv">o2</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>pos</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>posición del elemento ordenado a obtener.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>array</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>array a utilizar para obtener el elemento ordenado. El array proporcionado se pasa por referencia y se modifica tras la ejecución de este método.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fromIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>posición donde se inicia la ordenación (inclusivo).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>toIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>posición donde finaliza la ordenación (exclusivo).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>comparator</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>determina si un elemento es mayor o menor que otro. Devuelve -1 si o1 es menor que o2, 0 si o1 es igual a o2 y 1 si o1 es mayor que o2.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>o1</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>primer elemento a comparar</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>o2</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>segundo elemento a comparar</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC25swiftProtocolsAndGenerics6Sorter6selecturFzTSi4fromRGSax_9fromIndexSi7toIndexSi10comparatorPS_10Comparator__x"></a>
+                    <a name="//apple_ref/swift/Method/select(_:from:fromIndex:toIndex:comparator:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC25swiftProtocolsAndGenerics6Sorter6selecturFzTSi4fromRGSax_9fromIndexSi7toIndexSi10comparatorPS_10Comparator__x">select(_:from:fromIndex:toIndex:comparator:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Devuelve el elemento ordenado en la posición pos del array proporcionado,
+iniciando la ordenación en fromIndex hasta toIndex. Los elementos del array
+fuera de este rango se ignoran.
+La selección de un elemento normalmente es más rápido que ordenar todo el
+array por completo (sobretodo en arrays grandes), y por ese motivo debería
+usarse en lugar de sort si no es necesario ordenar todo el array por
+completo.
+Puesto que el array se pasa por referencia como un parámetro inout, tras
+la ejecución de este método el array proporcionado se modifica de tal modo
+que en la posición k-esima se almacena el elemento ordenado k-esimo, entre
+las posiciónes array[fromIndex] &hellip; array[k -1 + fromIndex] se almacenan
+los elementos sin ordenar menores que cualquiera de los elementos ordenados
+y en las posiciones array[k + 1 + fromIndex] &hellip; array[toIndex - 1] se
+almacenan los elementos sin ordenar mayores que cualquiera de los elementos
+ordenados.
+- parameter pos: posición del elemento ordenado a obtener.
+- parameter array: array a utilizar para obtener el elemento ordenado. El
+array proporcionado se pasa por referencia y se modifica tras la ejecución
+de este método.
+- parameter fromIndex: posición donde se inicia la ordenación (inclusivo).
+- parameter toIndex: posición donde finaliza la ordenación (exclusivo).
+- parameter comparator: determina si un elemento es mayor o menor que otro.
+- throws:
+   - SorterError.illegalIndices si fromIndex es mayor que toIndex.
+   - SorterError.indexOutOfBounds si los índices están fuera del rango
+   de índices válido para el array proporcionado.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">select</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">pos</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">from</span> <span class="nv">array</span><span class="p">:</span> <span class="k">inout</span> <span class="p">[</span><span class="kt">T</span><span class="p">],</span>
+                       <span class="n">fromIndex</span> <span class="nv">from</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">toIndex</span> <span class="nv">to</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+                       <span class="nv">comparator</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Comparator.html">Comparator</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>pos</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>posición del elemento ordenado a obtener.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>array</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>array a utilizar para obtener el elemento ordenado. El array proporcionado se pasa por referencia y se modifica tras la ejecución de este método.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fromIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>posición donde se inicia la ordenación (inclusivo).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>toIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>posición donde finaliza la ordenación (exclusivo).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>comparator</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>determina si un elemento es mayor o menor que otro.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC25swiftProtocolsAndGenerics6Sorter6selectuRxs10ComparablerFzTSi4fromRGSax_9fromIndexSi7toIndexSi_x"></a>
+                    <a name="//apple_ref/swift/Method/select(_:from:fromIndex:toIndex:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC25swiftProtocolsAndGenerics6Sorter6selectuRxs10ComparablerFzTSi4fromRGSax_9fromIndexSi7toIndexSi_x">select(_:from:fromIndex:toIndex:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Devuelve el elemento Comparable ordenador en la posición pos del array 
+proporcionado, iniciando la ordenación en fromIndex hasta toIndex. Los 
+elementos del array fuera de este rango se ignoran.
+La selección de un elemento normalmente es más rápido que ordenar todo el
+array por completo (sobretodo en arrays grandes), y por ese motivo debería
+usarse en lugar de sort si no es necesario ordenar todo el array por
+completo.
+Puesto que el array se pasa por referencia como un parámetro inout, tras
+la ejecución de este método el array proporcionado se modifica de tal modo
+que en la posición k-esima se almacena el elemento ordenado k-esimo, entre
+las posiciónes array[fromIndex] &hellip; array[k -1 + fromIndex] se almacenan
+los elementos sin ordenar menores que cualquiera de los elementos ordenados
+y en las posiciones array[k + 1 + fromIndex] &hellip; array[toIndex - 1] se
+almacenan los elementos sin ordenar mayores que cualquiera de los elementos
+ordenados.
+- parameter pos: posición del elemento ordenado a obtener.
+- parameter array: array a utilizar para obtener el elemento ordenado. El
+array proporcionado se pasa por referencia y se modifica tras la ejecución
+de este método.
+- parameter fromIndex: posición donde se inicia la ordenación (inclusivo).
+- parameter toIndex: posición donde finaliza la ordenación (exclusivo).
+- throws:
+   - SorterError.illegalIndices si fromIndex es mayor que toIndex.
+   - SorterError.indexOutOfBounds si los índices están fuera del rango
+   de índices válido para el array proporcionado.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">select</span><span class="o">&lt;</span><span class="kt">T</span> <span class="p">:</span> <span class="kt">Comparable</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">pos</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">from</span> <span class="nv">array</span><span class="p">:</span> <span class="k">inout</span> <span class="p">[</span><span class="kt">T</span><span class="p">],</span>
+                       <span class="n">fromIndex</span> <span class="nv">from</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">toIndex</span> <span class="nv">to</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>pos</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>posición del elemento ordenado a obtener.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>array</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>array a utilizar para obtener el elemento ordenado. El array proporcionado se pasa por referencia y se modifica tras la ejecución de este método.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fromIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>posición donde se inicia la ordenación (inclusivo).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>toIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>posición donde finaliza la ordenación (exclusivo).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC25swiftProtocolsAndGenerics6Sorter6selecturFTSi4fromRGSax_10comparatorFTxx_Si_x"></a>
+                    <a name="//apple_ref/swift/Method/select(_:from:comparator:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC25swiftProtocolsAndGenerics6Sorter6selecturFTSi4fromRGSax_10comparatorFTxx_Si_x">select(_:from:comparator:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Devuelve el elemento ordenado en la posición pos del array proporcionado.
+La selección de un elemento normalmente es más rápido que ordenar todo el
+array por completo (sobretodo en arrays grandes), y por ese motivo debería
+usarse en lugar de sort si no es necesario ordenar todo el array por
+completo.
+Puesto que el array se pasa por referencia como un parámetro inout, tras
+la ejecución de este método el array proporcionado se modifica de tal modo
+que en la posición k-ésima se almacena el elemento ordenado k-esimo.
+- parameter pos: posición del elemento ordenado a obtener.
+- parameter array: array a utilizar para obtener el elemento ordenado. El
+array proporcionado se pasa por referencia y se modifica tras la ejecución
+de este método.
+- parameter comparator: determina si un elemento es mayor o menor que otro.
+Devuelve -1 si o1 es menor que o2, 0 si o1 es igual a o2 y 1 si o1 es mayor
+que o2.
+- parameter o1: primer elemento a comparar
+- parameter o2: segundo elemento a comparar</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">select</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">pos</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">from</span> <span class="nv">array</span><span class="p">:</span> <span class="k">inout</span> <span class="p">[</span><span class="kt">T</span><span class="p">],</span>
+                       <span class="n">comparator</span> <span class="nv">c</span><span class="p">:</span> <span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">T</span><span class="p">,</span> <span class="nv">_</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>pos</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>posición del elemento ordenado a obtener.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>array</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>array a utilizar para obtener el elemento ordenado. El array proporcionado se pasa por referencia y se modifica tras la ejecución de este método.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>comparator</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>determina si un elemento es mayor o menor que otro. Devuelve -1 si o1 es menor que o2, 0 si o1 es igual a o2 y 1 si o1 es mayor que o2.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>o1</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>primer elemento a comparar</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>o2</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>segundo elemento a comparar</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC25swiftProtocolsAndGenerics6Sorter6selecturFTSi4fromRGSax_10comparatorPS_10Comparator__x"></a>
+                    <a name="//apple_ref/swift/Method/select(_:from:comparator:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC25swiftProtocolsAndGenerics6Sorter6selecturFTSi4fromRGSax_10comparatorPS_10Comparator__x">select(_:from:comparator:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Devuelve el elemento ordenado en la posición pos del array proporcionado.
+La selección de un elemento normalmente es más rápido que ordenar todo el
+array por completo (sobretodo en arrays grandes), y por ese motivo debería
+usarse en lugar de sort si no es necesario ordenar todo el array por
+completo.
+Puesto que el array se pasa por referencia como un parámetro inout, tras
+la ejecución de este método el array proporcionado se modifica de tal modo
+que en la posición k-ésima se almacena el elemento ordenado k-esimo.
+- parameter pos: posición del elemento ordenado a obtener.
+- parameter array: array a utilizar para obtener el elemento ordenado. El
+array proporcionado se pasa por referencia y se modifica tras la ejecución
+de este método.
+- parameter comparator: determina si un elemento es mayor o menor que otro.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">select</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">pos</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">from</span> <span class="nv">array</span><span class="p">:</span> <span class="k">inout</span> <span class="p">[</span><span class="kt">T</span><span class="p">],</span>
+                       <span class="n">comparator</span> <span class="nv">c</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Comparator.html">Comparator</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>pos</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>posición del elemento ordenado a obtener.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>array</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>array a utilizar para obtener el elemento ordenado. El array proporcionado se pasa por referencia y se modifica tras la ejecución de este método.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>comparator</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>determina si un elemento es mayor o menor que otro.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC25swiftProtocolsAndGenerics6Sorter6selectuRxs10ComparablerFTSi4fromRGSax__x"></a>
+                    <a name="//apple_ref/swift/Method/select(_:from:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC25swiftProtocolsAndGenerics6Sorter6selectuRxs10ComparablerFTSi4fromRGSax__x">select(_:from:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Devuelve el elemento Comparable ordenado en la posición pos del array 
+proporcionado.
+La selección de un elemento normalmente es más rápido que ordenar todo el
+array por completo (sobretodo en arrays grandes), y por ese motivo debería
+usarse en lugar de sort si no es necesario ordenar todo el array por
+completo.
+Puesto que el array se pasa por referencia como un parámetro inout, tras
+la ejecución de este método el array proporcionado se modifica de tal modo
+que en la posición k-ésima se almacena el elemento ordenado k-esimo.
+- parameter pos: posición del elemento ordenado a obtener.
+- parameter array: array a utilizar para obtener el elemento ordenado. El
+array proporcionado se pasa por referencia y se modifica tras la ejecución
+de este método.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">select</span><span class="o">&lt;</span><span class="kt">T</span> <span class="p">:</span> <span class="kt">Comparable</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">pos</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">from</span> <span class="nv">array</span><span class="p">:</span> <span class="k">inout</span> <span class="p">[</span><span class="kt">T</span><span class="p">])</span>
+        <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>pos</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>posición del elemento ordenado a obtener.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>array</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>array a utilizar para obtener el elemento ordenado. El array proporcionado se pasa por referencia y se modifica tras la ejecución de este método.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC25swiftProtocolsAndGenerics6Sorter6medianurFzTRGSax_9fromIndexSi7toIndexSi10comparatorFTxx_Si8averagerFTxx_x_x"></a>
+                    <a name="//apple_ref/swift/Method/median(_:fromIndex:toIndex:comparator:averager:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC25swiftProtocolsAndGenerics6Sorter6medianurFzTRGSax_9fromIndexSi7toIndexSi10comparatorFTxx_Si8averagerFTxx_x_x">median(_:fromIndex:toIndex:comparator:averager:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calcula la mediana del array proporcionado.
+La mediana se define como el valor central del rango de posiciones del 
+array considerando que los elementos del array están ordenados.
+El valor central a obtener del array es el ubicado en la posición 
+(toIndex - fromIndex) / 2
+Este método modifica el array proporcionado de modo que tras la ejecución
+contiene el elemento ordenado en la posición (toIndex - fromIndex) / 2,
+elementos menores sin ordenar en array[fromIndex] &hellip; array[(toIndex - fromIndex) / 2 + fromIndex - 1]
+y elementos mayores sin ordenar en array[(toIndex - fromIndex) / 2 + fromIndex - 1 &hellip; array[toIndex - 1]
+- parameter: array a utilizar para obtener su mediana. El array 
+proporcionado se pasa por referencia y se modifica tras la ejecución de
+este método.
+- parameter fromIndex: posición donde se inicia la ordenación (inclusivo).
+- parameter toIndex: posición donde finaliza la ordenación (exclusivo).
+- parameter comparator: determina si un elemento es mayor o menor que otro.
+Devuelve -1 si o1 es menor que o2, 0 si o1 es igual a o2 y 1 si o1 es mayor
+que o2.
+- parameter o1: primer elemento a comparar
+- parameter o2: segundo elemento a comparar
+- parameter averager: obtiene el promedio entre los valores o1 y o2 
+proporcionados.
+- throws:
+   - SorterError.illegalIndices si fromIndex es mayor que toIndex.
+   - SorterError.indexOutOfBounds si los índices están fuera del rango
+   de índices válido para el array proporcionado.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">median</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">array</span><span class="p">:</span> <span class="k">inout</span> <span class="p">[</span><span class="kt">T</span><span class="p">],</span> <span class="n">fromIndex</span> <span class="nv">from</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+                       <span class="n">toIndex</span> <span class="nv">to</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">comparator</span> <span class="nv">c</span><span class="p">:</span> <span class="p">(</span><span class="n">_</span> <span class="nv">o1</span><span class="p">:</span> <span class="kt">T</span><span class="p">,</span> <span class="n">_</span> <span class="nv">o2</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">,</span>
+                       <span class="nv">averager</span><span class="p">:</span> <span class="p">(</span><span class="n">_</span> <span class="nv">o1</span><span class="p">:</span> <span class="kt">T</span><span class="p">,</span> <span class="n">_</span> <span class="nv">o2</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fromIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>posición donde se inicia la ordenación (inclusivo).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>toIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>posición donde finaliza la ordenación (exclusivo).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>comparator</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>determina si un elemento es mayor o menor que otro. Devuelve -1 si o1 es menor que o2, 0 si o1 es igual a o2 y 1 si o1 es mayor que o2.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>o1</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>primer elemento a comparar</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>o2</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>segundo elemento a comparar</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>averager</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>obtiene el promedio entre los valores o1 y o2 proporcionados.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC25swiftProtocolsAndGenerics6Sorter6medianurFzTRGSax_9fromIndexSi7toIndexSi21comparatorAndAveragerPS_21ComparatorAndAverager__x"></a>
+                    <a name="//apple_ref/swift/Method/median(_:fromIndex:toIndex:comparatorAndAverager:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC25swiftProtocolsAndGenerics6Sorter6medianurFzTRGSax_9fromIndexSi7toIndexSi21comparatorAndAveragerPS_21ComparatorAndAverager__x">median(_:fromIndex:toIndex:comparatorAndAverager:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calcula la mediana del array proporcionado.
+La mediana se define como el valor central del rango de posiciones del
+array considerando que los elementos del array están ordenados.
+El valor central a obtener del array es el ubicado en la posición
+(toIndex - fromIndex) / 2
+Este método modifica el array proporcionado de modo que tras la ejecución
+contiene el elemento ordenado en la posición (toIndex - fromIndex) / 2,
+elementos menores sin ordenar en array[fromIndex] &hellip; array[(toIndex - fromIndex) / 2 + fromIndex - 1]
+y elementos mayores sin ordenar en array[(toIndex - fromIndex) / 2 + fromIndex - 1 &hellip; array[toIndex - 1]
+- parameter: array a utilizar para obtener su mediana. El array
+proporcionado se pasa por referencia y se modifica tras la ejecución de
+este método.
+- parameter fromIndex: posición donde se inicia la ordenación (inclusivo).
+- parameter toIndex: posición donde finaliza la ordenación (exclusivo).
+- parameter comparatorAndAverager: determina si un elemento es mayor o 
+menor que otro y calcula el promedio entre dos elementos.
+- throws:
+   - SorterError.illegalIndices si fromIndex es mayor que toIndex.
+   - SorterError.indexOutOfBounds si los índices están fuera del rango
+   de índices válido para el array proporcionado.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">median</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">array</span><span class="p">:</span> <span class="k">inout</span> <span class="p">[</span><span class="kt">T</span><span class="p">],</span> <span class="n">fromIndex</span> <span class="nv">from</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+                       <span class="n">toIndex</span> <span class="nv">to</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+                       <span class="n">comparatorAndAverager</span> <span class="nv">ca</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ComparatorAndAverager.html">ComparatorAndAverager</a></span><span class="p">)</span>
+        <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fromIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>posición donde se inicia la ordenación (inclusivo).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>toIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>posición donde finaliza la ordenación (exclusivo).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>comparatorAndAverager</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>determina si un elemento es mayor o menor que otro y calcula el promedio entre dos elementos.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC25swiftProtocolsAndGenerics6Sorter6medianurFTRGSax_10comparatorFTxx_Si8averagerFTxx_x_x"></a>
+                    <a name="//apple_ref/swift/Method/median(_:comparator:averager:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC25swiftProtocolsAndGenerics6Sorter6medianurFTRGSax_10comparatorFTxx_Si8averagerFTxx_x_x">median(_:comparator:averager:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calcula la mediana del array proporcionado.
+La mediana se define como el valor central del rango de posiciones del
+array considerando que los elementos del array están ordenados.
+- parameter: array a utilizar para obtener su mediana. El array
+proporcionado se pasa por referencia y se modifica tras la ejecución de
+este método.
+- parameter comparator: determina si un elemento es mayor o menor que otro.
+Devuelve -1 si o1 es menor que o2, 0 si o1 es igual a o2 y 1 si o1 es mayor
+que o2.
+- parameter o1: primer elemento a comparar
+- parameter o2: segundo elemento a comparar
+- parameter averager: obtiene el promedio entre los valores o1 y o2
+proporcionados.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">median</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">array</span><span class="p">:</span> <span class="k">inout</span> <span class="p">[</span><span class="kt">T</span><span class="p">],</span> <span class="n">comparator</span> <span class="nv">c</span><span class="p">:</span> <span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">T</span><span class="p">,</span> <span class="nv">_</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span>
+        <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">,</span>
+                       <span class="n">averager</span> <span class="nv">a</span><span class="p">:</span> <span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">T</span><span class="p">,</span> <span class="nv">_</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>comparator</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>determina si un elemento es mayor o menor que otro. Devuelve -1 si o1 es menor que o2, 0 si o1 es igual a o2 y 1 si o1 es mayor que o2.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>o1</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>primer elemento a comparar</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>o2</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>segundo elemento a comparar</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>averager</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>obtiene el promedio entre los valores o1 y o2 proporcionados.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC25swiftProtocolsAndGenerics6Sorter6medianurFTRGSax_21comparatorAndAveragerPS_21ComparatorAndAverager__x"></a>
+                    <a name="//apple_ref/swift/Method/median(_:comparatorAndAverager:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC25swiftProtocolsAndGenerics6Sorter6medianurFTRGSax_21comparatorAndAveragerPS_21ComparatorAndAverager__x">median(_:comparatorAndAverager:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calcula la mediana del array proporcionado.
+La mediana se define como el valor central del rango de posiciones del
+array considerando que los elementos del array están ordenados.
+- parameter: array a utilizar para obtener su mediana. El array
+proporcionado se pasa por referencia y se modifica tras la ejecución de
+este método.
+- parameter comparatorAndAverager: determina si un elemento es mayor o
+menor que otro y calcula el promedio entre dos elementos.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">median</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">array</span><span class="p">:</span> <span class="k">inout</span> <span class="p">[</span><span class="kt">T</span><span class="p">],</span>
+                       <span class="n">comparatorAndAverager</span> <span class="nv">ca</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ComparatorAndAverager.html">ComparatorAndAverager</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>comparatorAndAverager</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>determina si un elemento es mayor o menor que otro y calcula el promedio entre dos elementos.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC25swiftProtocolsAndGenerics6Sorter6createFT6methodOS_13SortingMethod_S0_"></a>
+                    <a name="//apple_ref/swift/Method/create(method:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC25swiftProtocolsAndGenerics6Sorter6createFT6methodOS_13SortingMethod_S0_">create(method:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Método de factoría para crear instancias de Sorter que utilicen el método
+de ordenación indicado.
+- param method: método de ordenación.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">create</span><span class="p">(</span><span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="../Enums/SortingMethod.html">SortingMethod</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Sorter</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC25swiftProtocolsAndGenerics6Sorter6createFT_S0_"></a>
+                    <a name="//apple_ref/swift/Method/create()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC25swiftProtocolsAndGenerics6Sorter6createFT_S0_">create()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Método de factoría para crear instancias de Sorter con el método de 
+ordenación por defecto.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">create</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Sorter</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:OC25swiftProtocolsAndGenerics6Sorter11SorterError"></a>
+                    <a name="//apple_ref/swift/Enum/SorterError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:OC25swiftProtocolsAndGenerics6Sorter11SorterError">SorterError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tipos de error que pueden obtenerse al ordenar arrays.</p>
+
+                        <a href="../Classes/Sorter/SorterError.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">SorterError</span> <span class="p">:</span> <span class="kt">Error</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external">Alberto</a>. All rights reserved. (Last updated: 2016-12-17)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

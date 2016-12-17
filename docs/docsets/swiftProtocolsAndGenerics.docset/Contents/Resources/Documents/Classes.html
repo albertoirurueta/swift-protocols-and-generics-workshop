@@ -31,7 +31,50 @@
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Classes/Container.html">Container</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/EditDistance.html">EditDistance</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/FoundationSorter.html">FoundationSorter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/HeapsortSorter.html">HeapsortSorter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/QuicksortSorter.html">QuicksortSorter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ShellSorter.html">ShellSorter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Sorter.html">Sorter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Sorter/SorterError.html">– SorterError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/StraightInsertionSorter.html">StraightInsertionSorter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/SortingMethod.html">SortingMethod</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/Comparator.html">Comparator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/ComparatorAndAverager.html">ComparatorAndAverager</a>
               </li>
             </ul>
           </li>
@@ -45,6 +88,225 @@
 
           </section>
           <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C25swiftProtocolsAndGenerics9Container"></a>
+                    <a name="//apple_ref/swift/Class/Container" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C25swiftProtocolsAndGenerics9Container">Container</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Contenedor de un objeto cualquiera de tipo T.</p>
+
+                        <a href="Classes/Container.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Container</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C25swiftProtocolsAndGenerics6Sorter"></a>
+                    <a name="//apple_ref/swift/Class/Sorter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C25swiftProtocolsAndGenerics6Sorter">Sorter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Clase base para ordenar arrays de tipo T en orden ascendente (de menor a 
+mayor).
+Si se desea obtener el orden inverso, se pueden utilizar closures o Comparators
+para invertir el orden.
+Esta clase no puede instanciarse directamente, debe usarse una de las subclases
+disponibles.</p>
+
+                        <a href="Classes/Sorter.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Sorter</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C25swiftProtocolsAndGenerics15QuicksortSorter"></a>
+                    <a name="//apple_ref/swift/Class/QuicksortSorter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C25swiftProtocolsAndGenerics15QuicksortSorter">QuicksortSorter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ordena arrays utilizando el algoritmo Quicksort.
+El algoritmo quicksort es el más complejo pero el que ordena arrays de 
+cualquier tamaño en el menor tiempo en promedio.
+Esta clase se basa en el algoritmo descrito en:
+Numerical Recipes. 3rd Edition. Cambridge Press. Chapter 8. p. 424
+Sedgewich, R. 1978. <q>Implementing Quicksort Programs</q>, Communications of the
+ACM, vol. 21. pp. 847-857.</p>
+
+                        <a href="Classes/QuicksortSorter.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">QuicksortSorter</span> <span class="p">:</span> <span class="kt"><a href="Classes/Sorter.html">Sorter</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C25swiftProtocolsAndGenerics16FoundationSorter"></a>
+                    <a name="//apple_ref/swift/Class/FoundationSorter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C25swiftProtocolsAndGenerics16FoundationSorter">FoundationSorter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ordena array utilizando el algoritmo proporcionado por la Foundation de Swift.</p>
+
+                        <a href="Classes/FoundationSorter.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">FoundationSorter</span> <span class="p">:</span> <span class="kt"><a href="Classes/Sorter.html">Sorter</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C25swiftProtocolsAndGenerics14HeapsortSorter"></a>
+                    <a name="//apple_ref/swift/Class/HeapsortSorter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C25swiftProtocolsAndGenerics14HeapsortSorter">HeapsortSorter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ordena arrays utilizando el algoritmo Heapsort.
+El algoritmo Heapsort se basa en la idea de árboles ordenados y tiene mejor
+rendimiento que la inserción directa.
+Esta clase se basa en el algoritmo descrito en:
+Numerical Recipes. 3rd Edition. Cambridge PRess. Chapter 8. p. 428.
+Knuth. D.E. 1997, Sorting and Searching, 3rd ed., vol. 3 of The Art of
+Computer Programming (Reading, MA: Addison-Wesley)
+Sedgewick, R. 1998. Algorithms in C, 3rd ed. (Reading, MA: Addison-Wesley),
+Chapter 11.</p>
+
+                        <a href="Classes/HeapsortSorter.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">HeapsortSorter</span> <span class="p">:</span> <span class="kt"><a href="Classes/Sorter.html">Sorter</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C25swiftProtocolsAndGenerics11ShellSorter"></a>
+                    <a name="//apple_ref/swift/Class/ShellSorter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C25swiftProtocolsAndGenerics11ShellSorter">ShellSorter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ordena arrays utilizando el algoritmo de Shell.
+El algoritmo de Shell es una mejora del algoritmo de inserción directa para
+ordenar arrays de forma más rápida.
+Esta clase se basa en el algoritmo descrito en:
+Numerical Recipes. 3rd Edition. Cambridge Press. Chapter 8. p. 422
+Knuth. D.E. 1997, Sorting and Searching, 3rd ed., vol. 3 of The Art of
+Computer Programming (Reading, MA: Addison-Wesley)
+Sedgewich, R. 1998. Algorithms in C, 3rd ed. (Reading, MA: Addison-Wesley),
+Chapter 11.</p>
+
+                        <a href="Classes/ShellSorter.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ShellSorter</span><span class="p">:</span> <span class="kt"><a href="Classes/Sorter.html">Sorter</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
             <div class="task-group">
               <ul>
                 <li class="item">
@@ -84,10 +346,50 @@ ortografía, etc).</p>
                 </li>
               </ul>
             </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C25swiftProtocolsAndGenerics23StraightInsertionSorter"></a>
+                    <a name="//apple_ref/swift/Class/StraightInsertionSorter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C25swiftProtocolsAndGenerics23StraightInsertionSorter">StraightInsertionSorter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ordena arrays utilizando un algoritmo de inserción directa.
+El algoritmo de inserción directa es el más sencillo pero también el más lento,
+aunque puede ser útil en arrays pequeños.
+Esta clase se basa en el algoritmo descrito en:
+Numerical Recipes. 3rd Edition. Cambridge Press. Chapter B. p. 424
+Knuth. D.E. 1997, Sorting and Searching, 3rd ed., vol. 3 of The Art of Computer
+Programming (Reading, MA: Addison-Wesley).
+Sedgewich, R. 1998. Algorithms in C, 3rd ed. (Reading, MA: Addison-Wesley), 
+Chapter 11.</p>
+
+                        <a href="Classes/StraightInsertionSorter.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">StraightInsertionSorter</span> <span class="p">:</span> <span class="kt"><a href="Classes/Sorter.html">Sorter</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external">Alberto</a>. All rights reserved. (Last updated: 2016-12-12)</p>
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external">Alberto</a>. All rights reserved. (Last updated: 2016-12-17)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

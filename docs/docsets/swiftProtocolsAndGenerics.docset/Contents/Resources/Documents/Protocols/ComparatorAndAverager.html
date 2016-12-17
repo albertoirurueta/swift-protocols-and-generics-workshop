@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>EditDistance Class Reference</title>
+    <title>ComparatorAndAverager Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Class/EditDistance" class="dashAnchor"></a>
-    <a title="EditDistance Class Reference"></a>
+    <a name="//apple_ref/swift/Protocol/ComparatorAndAverager" class="dashAnchor"></a>
+    <a title="ComparatorAndAverager Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">swiftProtocolsAndGenerics Docs</a> (100% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">swiftProtocolsAndGenerics Reference</a>
         <img id="carat" src="../img/carat.png" />
-        EditDistance Class Reference
+        ComparatorAndAverager Protocol Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -84,21 +84,15 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>EditDistance</h1>
+            <h1>ComparatorAndAverager</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">EditDistance</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ComparatorAndAverager</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Comparator.html">Comparator</a></span></code></pre>
 
                 </div>
               </div>
-            <p>Clase de utilidad que permite calcular la distancia de Levenshtein (número
-de sustituciones/modificaciones entre dos arrays o strings.
-La distancia de Levenshtein es una medida de comparación aproximada que tiene 
-en cuenta el número de modificaciones, elementos añadidos o eliminados que se
-requieren para hacer que dos colecciones de elementos sean iguales. Por lo 
-tanto, esta medida de distancia es apropiada para comparar Strings similares
-pero no exactamente iguales (para tener en cuenta errores tipográficos, de 
-ortografía, etc).</p>
+            <p>Permite comparar objetos y obtener el promedio entre dos objetos de tipo T.
+Este protocolo se utiliza para obtener la mediana en array de longitud par.</p>
 
           </section>
           <section class="section task-group-section">
@@ -107,9 +101,9 @@ ortografía, etc).</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:ZFC25swiftProtocolsAndGenerics12EditDistance8distanceFT1xSS1ySS_Si"></a>
-                    <a name="//apple_ref/swift/Method/distance(x:y:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:ZFC25swiftProtocolsAndGenerics12EditDistance8distanceFT1xSS1ySS_Si">distance(x:y:)</a>
+                    <a name="/s:FP25swiftProtocolsAndGenerics21ComparatorAndAverager7averageurFTqd__qd___qd__"></a>
+                    <a name="//apple_ref/swift/Method/average(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP25swiftProtocolsAndGenerics21ComparatorAndAverager7averageurFTqd__qd___qd__">average(_:_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -117,17 +111,17 @@ ortografía, etc).</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Calcula la distance de Levenshtein entre dos Strings.
-- parameter x: el primer String.
-- parameter y: el segundo String.
-- returns: la distancia de Levenshtein.</p>
+                        <p>Calcula el promedio de los dos valores proporcionados.
+- parameter o1: primer valor.
+- parameter o2: segundo valor.
+- returns: promedio de los dos valores proporcionados.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">distance</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="n">average</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">o1</span><span class="p">:</span> <span class="kt">T</span><span class="p">,</span> <span class="n">_</span> <span class="nv">o2</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
 
                         </div>
                       </div>
@@ -138,12 +132,12 @@ ortografía, etc).</p>
                             <tr>
                               <td>
                                 <code>
-                                <em>x</em>
+                                <em>o1</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>el primer String.</p>
+                                  <p>primer valor.</p>
 
                                 </div>
                               </td>
@@ -151,12 +145,12 @@ ortografía, etc).</p>
                             <tr>
                               <td>
                                 <code>
-                                <em>y</em>
+                                <em>o2</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>el segundo String.</p>
+                                  <p>segundo valor.</p>
 
                                 </div>
                               </td>
@@ -166,7 +160,7 @@ ortografía, etc).</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>la distancia de Levenshtein.</p>
+                        <p>promedio de los dos valores proporcionados.</p>
 
                       </div>
                     </section>
